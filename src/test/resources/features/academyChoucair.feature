@@ -5,5 +5,11 @@
     @scenario1
     Scenario: Search for automation course
       Given than Alejandro wants to learn automation at the Academy Choucair
-      When he search for the course Recursos Automatización Bancolombia on the Choucair Academy platform
-      Then he finds the course called resources Recursos Automatización Bancolombia
+      | strUser   | strPassword  |
+      | TuUsuario | TuClave      |
+      When he search for the course on the Choucair Academy platform
+      | strCourse                           |
+      | Recursos Automatización Bancolombia |
+      Then he finds the course called
+      | strCourse                           |
+      | Recursos Automatización Bancolombia |
